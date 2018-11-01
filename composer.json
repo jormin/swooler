@@ -1,0 +1,12 @@
+{
+    "require-dev": {
+        "eaglewu/swoole-ide-helper": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jormin\\Swooler\\": "src/swooler",
+            "app\\": "src/app",
+            "console\\": "src/console"
+        }
+    }
+}
