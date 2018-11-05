@@ -32,7 +32,7 @@ class BaseServer extends BaseObject
     protected $port;
 
     /**
-     * @var string 服务类型
+     * @var string 服务端类型
      */
     protected $serverType;
 
@@ -60,7 +60,7 @@ class BaseServer extends BaseObject
      * @param int $taskWorkerNum
      * @param bool $daemonize
      */
-    public function __construct($host="0.0.0.0", $port=8080, $serverType='tcp', $workerNum=2, $taskWorkerNum=2, $daemonize=false)
+    public function __construct($host="0.0.0.0", $port=8080, $serverType='TCP', $workerNum=2, $taskWorkerNum=2, $daemonize=false)
     {
         $this->host = $host;
         $this->port = $port;
@@ -411,7 +411,7 @@ class BaseServer extends BaseObject
      * @param \swoole_websocket_frame $frame
      */
     public function onMessage(\swoole_websocket_server $server, \swoole_websocket_frame $frame){
-        $this->debugLog('建立连接并完成握手');
+        $this->debugLog('接收到消息');
         $this->debugLog('FD:'.$frame->fd);
         $this->debugLog('Opcode:'.$frame->opcode);
         $frame->opcode === WEBSOCKET_OPCODE_TEXT && $this->debugLog('Data:'.$frame->data);

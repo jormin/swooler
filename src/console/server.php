@@ -2,9 +2,9 @@
 
 namespace console;
 
-use Jormin\Swooler\Tcp\TcpServer;
+use Jormin\Swooler\Server\WebsocketServer;
 
 require_once __DIR__.'/index.php';
 
-$client = new TcpServer('127.0.0.1', 9999);
-$client->start();
+$webSocketClient = new WebsocketServer('127.0.0.1', 666);
+$webSocketClient->start();

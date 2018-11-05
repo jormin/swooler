@@ -9,7 +9,6 @@ define('CONSOLE_DIR', __DIR__);
 spl_autoload_register(function ($class){
    $baseDir = CONSOLE_DIR.'/../';
    $file = $baseDir . str_replace('\\', '/', $class) . '.php';
-   $file = str_replace('Jormin/Swooler', 'swooler', $file);
    if (file_exists($file)) {
        include_once $file;
    }

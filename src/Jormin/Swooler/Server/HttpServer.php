@@ -6,7 +6,7 @@
  * Time: 5:23 AM
  */
 
-namespace Jormin\Swooler\Http;
+namespace Jormin\Swooler\Server;
 
 use Jormin\Swooler\Base\BaseServer;
 
